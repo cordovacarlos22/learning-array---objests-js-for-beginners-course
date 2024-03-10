@@ -110,7 +110,7 @@ const beersObject = [
     alcohol: 3.5
   }, {
     name: "Tecate",
-    price: 4.50,
+    price: 8.50,
     alcohol: 6.5
   },
 ]
@@ -153,12 +153,39 @@ salute("carlos");
 
 // -----===  For Each JavaScript ===----
 
-  beersObject.forEach((item,index)=>{
-      console.log("Items ",item);
-      console.log("index ",index);
-      
-  });
+beersObject.forEach((item, index) => {
+  console.log("Items ", item);
+  console.log("index ", index);
 
+});
+
+
+// -----===   JavaScript SORT return elements in order only works in array objects  ===----
+
+// Javacript funtion that order  numbers  type elements only
+function compareNumbersSmallestToBiggest(a, b) {
+  return a - b;  //compares num a < b  and return them in order from smaller to biggest
+}
+
+numbers.sort(compareNumbersSmallestToBiggest) // orders numbers  from small to biggest
+console.log("Returns numbers array in order",numbers ) // Returns numbers array in order
+
+// returns  beers filter   by price(lowest to expensive) 
+// beersObject.sort((lowestPrice, biggestPrice) => lowestPrice.price - biggestPrice.price);
+// console.log("returns beers by lowest price to biggest price", beersObject)
+
+// Javacript funtion that order string type elements only
+
+beersObject.sort((a, b) => {
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+
+  return 0;
+});
 
 
 
