@@ -93,6 +93,27 @@ numbers2[6] = 0; // sets number2 index  6 to  0 without modifing numbers array
 
 
 
+// -----=== Array of objects ===----
+
+const beersObject = [
+  {
+    name:"Pilsener",
+    price:3.50,
+    alcohol: 4.5
+  },{
+    name:"Corona",
+    price:4.50,
+    alcohol: 5.5
+  },{
+    name:"Golden",
+    price:2.50,
+    alcohol: 3.5
+  },{
+    name:"Tecate",
+    price:4.50,
+    alcohol: 6.5
+  },
+]
 
 
 
@@ -127,6 +148,17 @@ const showDom = (element, arr) => {
   };
 };
 
+// this function will print  on the dom 
+const showDomObj = (element, arr) => {
+  document.querySelector(`.${element}`).innerHTML = ""
+
+  for (let i = 0; i < arr.length; i++) {
+    document.querySelector(`.${element}`).innerHTML += `
+    <div>${arr[i].name} $${arr[i].price} [${arr[i].alcohol}]</div>
+    `
+  };
+};
+
 function sum(a, b, c, d, e, f, g, h) {
   return a + b + c + d + e + f + g + h
 }
@@ -147,6 +179,8 @@ showDom('array6', numbers);
 
 // prints numbers2 
 showDom('array7', numbers2);
+
+showDomObj('array8',beersObject);
 
 
 
