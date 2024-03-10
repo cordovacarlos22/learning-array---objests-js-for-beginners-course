@@ -2,6 +2,7 @@
 let numbers = [2, 5, 6, 4, 10, 24, 40, 7];
 // string type array
 let beers = ["pilsener", "golden", "regia", "corona", "modelo"] // beers array  
+let beers3 = ["pilsener", "golden", "regia", "corona", "modelo"] // beers array  
 let wines = ["stela rosa", "San Antonio", "Cabernet"]; // wines array
 
 
@@ -16,6 +17,10 @@ console.log("get last number of array", numbers[numbers.length - 1])
 console.log("get a particular number(use this one better)", numbers.at(3))
 // gets last number of array in this case 7 
 console.log("get last number of array", numbers.at(-1))
+
+// gets a particular element index  in the array by value
+console.log("Get a particular element  index in the array by value",beers.indexOf("corona"))
+console.log("Get a particular element  index in the array by value", numbers.indexOf(40))
 
 // -----=== how to linear search in arrays one by one   ===----
 
@@ -60,10 +65,33 @@ console.log("Eliminated last element in the array", eliminateLastElementInArray)
 let eliminateFirstElementInArray = beers.shift();
 console.log("Eliminated first element  in the array", eliminateFirstElementInArray); // logs the element that has been eliminated
 
+// fills array  with same values  from index 0 to beers3 length
+beers3.fill("Pilsener",0,beers3.length);
+
+
 //! immutable methods (does not changes orginal array makes a copy of it)
-// joints 2 arrays together beers and wines
+// joints 2 arrays together beers and wines by creating a new array
 const alcoholicDrinks = beers.concat(wines);
+// push rioja to alcoholicDrinks 
 alcoholicDrinks.push("rioja");
+//  creates new array from beers but selecting values from where to start and from where to finish it in this case it starts @ index 0 and finish @ index 4 
+ let beers2 = beers.slice(0,4); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // -----=== Helper functions ===----
@@ -94,6 +122,10 @@ const showDom = (element, arr) => {
 showDom('array1', beers);
 // prints beers and wines arrays elements
 showDom('array2', alcoholicDrinks);
+// prints beers2  
+showDom('array3', beers2);
+// prints beers3 
+showDom('array4', beers3);
 
 
 
