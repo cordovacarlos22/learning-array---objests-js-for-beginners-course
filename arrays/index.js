@@ -193,15 +193,26 @@ beersObject.sort((a, b) => {
 const findBeerByName = beersObject.find((beer) => beer.name === "Pilsener"); // find only first element that matches name Pilsener
 console.log("Find Beer By name", findBeerByName);
 
-const filterAllElements = beersObject.filter((beers)=> beers.alcohol < 5); // finds all element with alcohol grade < 5 
-console.log("Beers with alcohol grade < 5",filterAllElements);
+const filterAllElements = beersObject.filter((beers) => beers.alcohol < 5); // finds all element with alcohol grade < 5 
+console.log("Beers with alcohol grade < 5", filterAllElements);
 
 
 
 
 
+// -----===   JavaScript every function   ===----
+let findElementsByPrice = (e) => e.price > 3;
+console.log("Every beer price > 2  : ", beersObject.every(findElementsByPrice)); // returns false not every beer price > 3
+
+// -----===   JavaScript some function   ===----
+
+console.log("Some beer price > 2  : ", beersObject.some(findElementsByPrice)); // returns false not every beer price > 3
 
 
+// -----===   JavaScript Revert Array   ===----
+alcoholicDrinks.reverse() // revers array order
+
+// -----===   JavaScript  Map Function   ===----
 
 
 
