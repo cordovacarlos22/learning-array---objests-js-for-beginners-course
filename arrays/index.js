@@ -214,7 +214,13 @@ alcoholicDrinks.reverse() // revers array order
 
 // -----===   JavaScript  Map Function   ===----
 
-
+  const beersObject2 = beersObject.map((element)=>{
+    return {
+      name:element.name,
+      price:element.price * 2,
+      alcohol:element.alcohol
+    }
+  });
 
 
 
@@ -280,6 +286,8 @@ showDom('array6', numbers);
 showDom('array7', numbers2);
 
 showDomObj('array8', beersObject);
+
+showDomObj('array9', beersObject2);
 
 
 
