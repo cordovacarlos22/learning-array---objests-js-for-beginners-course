@@ -1,5 +1,7 @@
-// array 
+//   numbers array 
 let numbers = [2,5,6,4,10,24,40,7];
+// string type array
+let beers = ["pilsener","golden","regia","corona","modelo"]
 
 // -----=== how to access a particular positions in arrays ===----
 // returns length of array 
@@ -24,7 +26,6 @@ console.log("get last number of array", numbers.at(-1))
 // prints each number inside numbers array one by one decreasement 
 for (let i = numbers.length -1 ; i >= 0; i--) {
   console.log("number index decreasement", numbers[i]);
-
 }
 
 
