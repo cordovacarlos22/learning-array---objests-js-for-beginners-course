@@ -19,7 +19,7 @@ console.log("get a particular number(use this one better)", numbers.at(3))
 console.log("get last number of array", numbers.at(-1))
 
 // gets a particular element index  in the array by value
-console.log("Get a particular element  index in the array by value",beers.indexOf("corona"))
+console.log("Get a particular element  index in the array by value", beers.indexOf("corona"))
 console.log("Get a particular element  index in the array by value", numbers.indexOf(40))
 
 // -----=== how to linear search in arrays one by one   ===----
@@ -66,7 +66,7 @@ let eliminateFirstElementInArray = beers.shift();
 console.log("Eliminated first element  in the array", eliminateFirstElementInArray); // logs the element that has been eliminated
 
 // fills array  with same values  from index 0 to beers3 length
-beers3.fill("Pilsener",0,beers3.length);
+beers3.fill("Pilsener", 0, beers3.length);
 
 
 //! immutable methods (does not changes orginal array makes a copy of it)
@@ -75,12 +75,21 @@ const alcoholicDrinks = beers.concat(wines);
 // push rioja to alcoholicDrinks 
 alcoholicDrinks.push("rioja");
 //  creates new array from beers but selecting values from where to start and from where to finish it in this case it starts @ index 0 and finish @ index 4 
- let beers2 = beers.slice(0,4); 
+let beers2 = beers.slice(0, 4);
 
 
 
 
+// -----=== Spread Operator in arrays ===----
 
+// returns a sum of all number inside numbers array 
+console.log("Sum", sum(...numbers));
+// joint two array by using spread operator not concat function
+let arr = [...numbers, ...beers];
+// makes a copy of numbers array using spread operator
+let numbers2 = [...numbers];
+numbers2[4] = 5000; // sets number2 index  4 to 5000 without modifing numbers array
+numbers2[6] = 0; // sets number2 index  6 to  0 without modifing numbers array
 
 
 
@@ -118,6 +127,10 @@ const showDom = (element, arr) => {
   };
 };
 
+function sum(a, b, c, d, e, f, g, h) {
+  return a + b + c + d + e + f + g + h
+}
+
 // prints beers inside array1 class on the dom
 showDom('array1', beers);
 // prints beers and wines arrays elements
@@ -126,6 +139,14 @@ showDom('array2', alcoholicDrinks);
 showDom('array3', beers2);
 // prints beers3 
 showDom('array4', beers3);
+// prints arr 
+showDom('array5', arr);
+
+// prints numbers
+showDom('array6', numbers);
+
+// prints numbers2 
+showDom('array7', numbers2);
 
 
 
