@@ -151,7 +151,13 @@ salute("carlos");
 
 
 
+// -----===  For Each JavaScript ===----
 
+  beersObject.forEach((item,index)=>{
+      console.log("Items ",item);
+      console.log("index ",index);
+      
+  });
 
 
 
@@ -188,10 +194,10 @@ const showDom = (element, arr) => {
 // this function will print  on the dom 
 const showDomObj = (element, arr) => {
   document.querySelector(`.${element}`).innerHTML = ""
-
-  for (let i = 0; i < arr.length; i++) {
+  // -----===  For Of JavaScript ===----
+  for (let e of arr) {
     document.querySelector(`.${element}`).innerHTML += `
-    <div>${arr[i].name} $${arr[i].price} [${arr[i].alcohol}]</div>
+    <div>${e.name} $${e.price} [${e.alcohol}]</div>
     `
   };
 };
