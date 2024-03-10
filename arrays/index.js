@@ -222,6 +222,11 @@ alcoholicDrinks.reverse() // revers array order
     }
   });
 
+// -----===   JavaScript  Reduce Function   ===----
+
+let totalPriceForBeers = beersObject.reduce((accumulated, current) => accumulated + current.price,0);
+ console.log("Total price Beers",totalPriceForBeers);
+
 
 
 
