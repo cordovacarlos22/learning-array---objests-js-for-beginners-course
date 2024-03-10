@@ -168,7 +168,7 @@ function compareNumbersSmallestToBiggest(a, b) {
 }
 
 numbers.sort(compareNumbersSmallestToBiggest) // orders numbers  from small to biggest
-console.log("Returns numbers array in order",numbers ) // Returns numbers array in order
+console.log("Returns numbers array in order", numbers) // Returns numbers array in order
 
 // returns  beers filter   by price(lowest to expensive) 
 // beersObject.sort((lowestPrice, biggestPrice) => lowestPrice.price - biggestPrice.price);
@@ -186,6 +186,24 @@ beersObject.sort((a, b) => {
 
   return 0;
 });
+
+
+
+// -----===   JavaScript Find and filters a specific element   ===----
+const findBeerByName = beersObject.find((beer) => beer.name === "Pilsener"); // find only first element that matches name Pilsener
+console.log("Find Beer By name", findBeerByName);
+
+const filterAllElements = beersObject.filter((beers)=> beers.alcohol < 5); // finds all element with alcohol grade < 5 
+console.log("Beers with alcohol grade < 5",filterAllElements);
+
+
+
+
+
+
+
+
+
 
 
 
