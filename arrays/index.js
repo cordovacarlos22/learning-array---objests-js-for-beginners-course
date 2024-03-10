@@ -29,3 +29,29 @@ for (let i = numbers.length -1 ; i >= 0; i--) {
 }
 
 
+
+// function to show number in a incresement order 
+function printArr(arr){
+  // prints each number inside numbers array one by one in a  increasement
+  for (let i = 0; i < arr.length; i++) {
+    console.log("number index increasement", arr[i]);
+
+  };
+};
+// console logs beers names in a incresement order 
+printArr(beers);
+
+// this function will print  on the dom 
+const showDom = (element,arr)=>{
+  document.querySelector(`.${element}`).innerHTML = ""
+
+  for (let i = 0; i < arr.length; i++) {
+    document.querySelector(`.${element}`).innerHTML +=`
+    <div>${arr[i]}</div>
+    `
+  };
+}
+// prints beers inside array1 class on the dom
+showDom('array1',beers);
+
+
