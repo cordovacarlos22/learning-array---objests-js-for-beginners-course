@@ -97,20 +97,20 @@ numbers2[6] = 0; // sets number2 index  6 to  0 without modifing numbers array
 
 const beersObject = [
   {
-    name:"Pilsener",
-    price:3.50,
+    name: "Pilsener",
+    price: 3.50,
     alcohol: 4.5
-  },{
-    name:"Corona",
-    price:4.50,
+  }, {
+    name: "Corona",
+    price: 4.50,
     alcohol: 5.5
-  },{
-    name:"Golden",
-    price:2.50,
+  }, {
+    name: "Golden",
+    price: 2.50,
     alcohol: 3.5
-  },{
-    name:"Tecate",
-    price:4.50,
+  }, {
+    name: "Tecate",
+    price: 4.50,
     alcohol: 6.5
   },
 ]
@@ -120,20 +120,45 @@ const beersObject = [
 
 
 //First-Class function
-let sayHello = function(){
+let sayHello = function () {
   console.log("Hello");
 }
 // sayHello(); 
 
 
 // Higher-Order Functions 
-function doSomething(f){
+function doSomething(f) {
   console.log("before");
   f();
   console.log("after");
 }
 
 doSomething(sayHello);
+
+
+// -----===  Arrow Functions in JavaScript ===----
+
+//Arrow Functions
+let sayBye = () => {
+  console.log("Bye");
+}
+sayBye();
+
+let salute = (name) => console.log(`Hello ${name}`);
+
+salute("carlos");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // -----=== Helper functions ===----
@@ -192,7 +217,7 @@ showDom('array6', numbers);
 // prints numbers2 
 showDom('array7', numbers2);
 
-showDomObj('array8',beersObject);
+showDomObj('array8', beersObject);
 
 
 
