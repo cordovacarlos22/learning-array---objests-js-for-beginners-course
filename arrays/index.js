@@ -116,12 +116,24 @@ const beersObject = [
 ]
 
 
+// -----===  First-Class and Higher-Order Functions in JavaScript ===----
 
 
+//First-Class function
+let sayHello = function(){
+  console.log("Hello");
+}
+// sayHello(); 
 
 
+// Higher-Order Functions 
+function doSomething(f){
+  console.log("before");
+  f();
+  console.log("after");
+}
 
-
+doSomething(sayHello);
 
 
 // -----=== Helper functions ===----
