@@ -228,6 +228,19 @@ let totalPriceForBeers = beersObject.reduce((accumulated, current) => accumulate
  console.log("Total price Beers",totalPriceForBeers);
 
 
+// -----===  function array  ===----
+
+const functionsArray = [
+
+  ()=>console.log("I am the first functions"),
+  ()=>console.log("I am the second functions"),
+  ()=>console.log("I am the third functions"),
+
+];
+
+functionsArray.forEach(eFunction => eFunction());
+
+
 
 
 
